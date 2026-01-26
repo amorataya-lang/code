@@ -1,23 +1,14 @@
-import board
-import digitalio
 import time
-
-led = digitalio.DigitalInOut(board.LED)
-led.direction = digitalio.Direction.OUTPUT
-
-print(dir(led))
-print(led.value)
-print(led.direction)
-print()
-
-print(dir(time))
-print()
-
-x = time.localtime()
-print(x)
+import math
+from adafruit_circuitplayground import cp
 
 while True:
-    led.value = True    # LED ON
-    time.sleep(0.5)
-    led.value = False   # LED OFF
-    time.sleep(0.5)
+    loudness = cp.sound_level
+    print(loudness)
+    loudness = loudness/50
+    angle = int(loudness) % 10
+    cp.pixels[angle] = (25, 0, 0)
+    time.sleep(0.01)
+    for i in range(10):
+        if(i > angle):
+            cp.pixels[i] = (0, 0, 0)
