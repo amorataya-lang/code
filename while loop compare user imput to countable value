@@ -1,0 +1,15 @@
+def main():
+    count = 1
+    target = 5
+
+    while True:
+        user_input = input("enter a number: ")
+        
+        try:
+            user_input = int(user_input)
+        except ValueError:
+            print("please enter a valid integer")
+            continue
+        
+        if user_input == target:
+            print("correct! you matched the count value.")
