@@ -1,0 +1,14 @@
+def main():
+    print("starting code challenge")
+    
+    number = 5
+    print("starting while loop - counting down")
+    
+    while number > 0:
+        print(f"current number is {number}")
+        number -= 1
+    
+    print("ending while loop")
+    print("ending code challenge")
+
+main()
