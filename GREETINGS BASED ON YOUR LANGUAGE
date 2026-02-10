@@ -1,0 +1,30 @@
+# Function that returns a greeting based on language
+def greet(lang):
+    if lang == 'es':
+        return 'Hola'
+    elif lang == 'fr':
+        return 'Bonjour'
+    elif lang == 'sw':
+        return 'Jambo'        # Swahili
+    elif lang == 'ua':
+        return 'Privit'       # Ukrainian
+    elif lang == 'el':
+        return 'Mae govannen' # Middle Earth Elven
+    elif lang == 'kl':
+        return 'nuqneH'       # Klingon
+    else:
+        return 'Hello'
+
+# Main function
+def main():
+    # Challenge 1: examples
+    print(greet('en'), 'Glenn')
+    print(greet('fr'), 'Sabine')
+    print(greet('es'), 'Carlos')
+    
+    # Challenge 3: ask the user
+    name = input("Enter your name: ")
+    language = input("Enter your language code (en, fr, es, sw, ua, el, kl): ")
+    print(greet(language), name)
+
+main()
